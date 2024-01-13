@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ------comienzo de header----- */
+header {
+    text-align: center;
+    padding-block: 20px;
+    background: pink;
+}
+
+.main-container {
+    background-color: beige;
+
+}
+
+.container-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    
+
+}
+
+.cuadro-meme {
+    position: relative;
+    width: 70vw;
+    height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.imagen-dentro {
+    background: black;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+.texto-de-meme {
+    color: wheat;
+    width: 100%;
+    background-color: rgb(194, 17, 230);
+    margin: 0px;
+    text-align: center;
+    padding-block: 30px;
+    font-size: 25;
+}
+
+.texto-de-meme p {
+    margin: 0; 
+}
+
+
+
+.boton-descarga {
+    margin-block: 30px;
+}
