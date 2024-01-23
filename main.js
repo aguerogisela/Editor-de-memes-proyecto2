@@ -20,6 +20,7 @@ fileInput.addEventListener("change", (e) => {
       imgElement.src = e.target.result;
     };
     reader.readAsDataURL(file);
+    console.log(file);
   }
 });
 
@@ -83,4 +84,17 @@ const saturacion = document.getElementById("saturateFiltro");
     aplicarFiltros();
 
 })
+
+//TEXTO
+
+//====Textarea y meme
+const actualizarTextoSuperior = () => {
+  const textoSuperior = document.getElementById("texto-superior-textarea").value;
+  document.getElementById("texto-superior").innerText = textoSuperior;
+};
+
+const actualizarTextoInferior = () => {
+  const textoInferior = document.getElementById("texto-inferior-textarea").value;
+  document.getElementById("texto-inferior").innerText = textoInferior
+};
 
