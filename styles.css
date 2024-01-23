@@ -34,6 +34,7 @@ body.dark-mode {
     height: 0;
     overflow: hidden;
     transition: height 0.5s ease;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -104,7 +105,9 @@ padding-bottom: 40px;
 }
 
 /*-------- Cuadro Meme -----*/
-
+img {
+    height: 0px;
+}
 .imagen-dentro {
     width: 100%;
     flex-grow: 1;
@@ -141,55 +144,31 @@ padding-bottom: 40px;
 /* --------------Aside de Imagen---------------- */
 
 /* ----Boton "editar imagen"----- */
-.arrow-container {
-    position: fixed;
-    bottom: 10px;
-    left: 55%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    background-color: #2522b2b0;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-.arrow-containerdos  {
-     position: fixed;
-    bottom: 10px;
-    left: 45%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    background-color: #2522b2b0;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-.arrow-containerdos:hover {
-    background-color: #62007a;
-}
 
-.arrow-container:hover {
-    background-color: #62007a;
-}
-
-
-.aside-uno {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+.asideuno {
     overflow-y: auto;
+    /* max-height: 100vh; */
+    /* height: 100%; */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
     transition: height 0.5s ease;
+    padding-top: 30px;
 }
+
 
 .imagen {
+    width: 275px;
     background-color: #fff;
     border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 40px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;
 
 }
 
@@ -269,29 +248,12 @@ padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 0;
-    height: 0;
+    /* min-height: 0;
+    height: 0; */
     overflow: hidden;
     transition: height 0.5s ease;
 }
 
-/* .arrow-container-asidedos {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-} */
-
-/* .arrow-container-asidedos:hover {
-    background-color: #555;
-} */
 
 h3 {
     font-size: 18px;
@@ -399,40 +361,6 @@ textarea {
     border-radius: 4px;
 }
 
-/* .aside-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    z-index: 1; 
-}
- */
-
-/* .arrow-container,
-.arrow-container-asidedos {
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.arrow-container:hover,
-.arrow-container-asidedos:hover {
-    background-color: #555;
-}
-.toggle-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.toggle-aside {
-    flex-grow: 1;
-    max-width: 30%; 
-} */
 
 footer{
         display: flex;
@@ -565,3 +493,34 @@ text-decoration: none;
 .botones a:hover {
     text-decoration: underline;
 }
+/* 
+.asidedos {
+
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.asidedos.active {
+  height: 100%;
+}
+
+
+.cerrar-aside:hover {
+  background-color: #555;
+}
+
+.asideuno {
+
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.asideuno.active {
+  height: 100%;
+}
+.asidedos.active,
+.asideuno.active {
+  height: 100%;
+} */
