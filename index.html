@@ -23,16 +23,18 @@
     <title>Editor de memes</title>
   </head>
   <body>
+    
     <!-- ====Comienzo de header==== -->
     <header>
       <h1>Generador de Memes</h1>
       <div class="botones">
-        <a href="#editarimagen" class="botonImagen">Imagen</a>
-        <a href="#editartexto" class="botonTexto">Texto</a>
-        <button onclick="modoOscuro()">Modo oscuro</button>
+        <a href="#editarimagen" class="botonheader">Imagen</a>
+        <a href="#editartexto" class="botonheader">Texto</a>
+        <button onclick="modoOscuro()" class="botonheader">Modo oscuro</button>
       </div>
     </header>
-    
+    <div class="super-container">
+  
     <!-- ===Comienzo de main==== -->
     <main class="main-container">
       <div class="container-padre">
@@ -227,8 +229,9 @@
         </form>
       </div>
     </aside>
-    <!-- ==========ARROW DE ASIDE (EDIRAR IMAGEN)======== -->
-    <!-- ===Comienzo de segundo Aside (TEXTO)==== -->
+
+    <!-- ===Comienzo de segundo Aside (TEXTO)==============================================-->
+
     <aside id="textoAside" class="asidedos">
       <div class="texto" id="editartexto">
         <h2 class="titulo-texto">TEXTO</h2>
@@ -290,7 +293,7 @@ BOTTOM TEXT</textarea
               </div>
               <div class="fuente-dos">
                 <div class="tamaño">
-                  <label for="tamañoFuente">Tamaño de fuente:</label>
+                  <label for="tamañoFuente"></label>
                   <input
                     type="number"
                     id="tamañoFuente"
@@ -302,7 +305,15 @@ BOTTOM TEXT</textarea
                     oninput="cambiarTamañoFuente()"
                   />
                 </div>
-                <div id="opcionesAlineacion"></div>
+
+
+                <div id="opcionesAlineacion"  class="alineacion">                 
+                   <button><i class="fa-solid fa-align-right"></i></button>
+                   <button><i class="fa-solid fa-align-justify"></i></button>
+                   <button><i class="fa-solid fa-align-left"></i></button>
+                </div>
+
+
               </div>
               <div class="opcion-de-color">
                 <div class="color-de-texto">
@@ -398,27 +409,35 @@ BOTTOM TEXT</textarea
         </form>
       </div>
     </aside>
-    <!--==== ========================= COMIENZO DE FOOTER =====================-->
+    </div><!--==== ========================= COMIENZO DE FOOTER =====================-->
     <footer>
+      <nav class="ultimos-iconos">             
+
       <!-- Aqui van de nuevo los links del header -->
-      <nav class="ultimos-iconos">
-        <a href="https://github.com/aguerogisela" class="red-githubdos"></a>
-        <a
-          href="https://www.linkedin.com/in/gisela-belen-ag%C3%BCero-barriga-8b0351209/"
-          class="red-githubdos"
-        ></a>
-        <a href="https://www.behance.net/giselaagero1" class="red-githubdos"
-          ><!-- ====================PONER OTRA OPCION DE CONTACTO================= --></a
-        >
-        <a
-          href="mailto:aguerobel03@gmail.com?Subject=Hola%20Belen%20vi%20tu%20portfolio"
-          class="red-githubdos"
-        ></a>
-      </nav>
+      <a href="https://github.com/aguerogisela" class="red-githubdos">
+        <span><i class="fa-brands fa-github-alt"></i></span>
+   </a>
+       
+   
+   <a href="https://www.linkedin.com/in/gisela-belen-ag%C3%BCero-barriga-8b0351209/" class="red-githubdos">
+        <span><i class="fa-brands fa-linkedin"></i></span>
+       
+     </a>
+     <a href="https://www.behance.net/giselaagero1" class="red-githubdos">
+       <span><i class="fa-brands fa-behance"></i></span>
+       
+       <!-- --------------------PONER OTRA OPCION DE CONTACTO----------------- -->
+    </a>
+    <a href="mailto:aguerobel03@gmail.com?Subject=Hola%20Belen%20vi%20tu%20portfolio" class="red-githubdos">
+        <span><i class="fa-regular fa-envelope"></i></span>
+         </a>
+</nav>
       <div class="saludo-final">
         <p>Hecho con amor 🩷 por Gisela</p>
       </div>
     </footer>
+  
+
     <!-- ============= FINAL ================ -->
     <script src="main.js"></script>
   </body>

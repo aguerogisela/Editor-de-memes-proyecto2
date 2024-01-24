@@ -31,6 +31,8 @@ body.dark-mode {
     --color-background: #636363;
     --color-text-dark: #ffffff;
     --color-header-background: #464646;
+    --color-border: 2px solid #e200e2;
+
 }
 
 /* Modo Claro */
@@ -44,6 +46,10 @@ body.dark-mode {
 /* ----OTROS COLORES---- */
 :root {
     --color-seleccionado: pink;
+}
+
+ @media screen and (min-width: 970px){
+
 }
 
 /*------------------- Header-------------------------- */
@@ -67,6 +73,7 @@ header.dark-mode {
 }
 button a {
     text-decoration: none;
+    color: white;
 }
 
 /* -------botones------ */
@@ -84,19 +91,8 @@ border: 2px solid rgba(207, 70, 200, 0.7) ;
 border-radius: 5px;
 transition: background-color 0.3s ease;
 }
-
-.botonTexto{
+.botonheader{
     background-color: rgba(236, 194, 234, 0.4); /* Color azul con 70% de opacidad */
-color: #fff;
-padding: 10px 15px;
-cursor: pointer;
-border: 2px solid rgba(207, 70, 200, 0.7) ;
-border-radius: 5px;
-transition: background-color 0.3s ease;
-
-}
-.botones button {
-background-color: rgba(236, 194, 234, 0.4); /* Color azul con 70% de opacidad */
 color: #fff;
 padding: 10px 15px;
 cursor: pointer;
@@ -116,7 +112,6 @@ margin-right: 5px;
   /* Estilo para el enlace dentro del botón */
 .botones a {
     text-decoration: none;
-    color: inherit;
 }
 
 .botones a:hover {
@@ -193,6 +188,7 @@ padding-bottom: 40px;
     overflow: hidden;
     transition: height 0.5s ease;
     padding-top: 30px;
+    background-color: var(--color-header-background);
 }
 
 #imgTag {
@@ -205,7 +201,7 @@ padding-bottom: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 40px;
-
+    border: var(--color-border);
 }
 
 .titulo-imagen {
@@ -288,6 +284,7 @@ padding-bottom: 40px;
     height: 0; */
     overflow: hidden;
     transition: height 0.5s ease;
+    background-color: var(--color-background);
 }
 
 
@@ -301,6 +298,8 @@ h3 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 40px;
+    border: var(--color-border);
+
 }
 
 
@@ -391,6 +390,9 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    padding-right: 62px;
+    padding-block: 12px;
+    padding-left: 10px;
 }
 
 /*----- Alineacion--- */
@@ -470,6 +472,10 @@ textarea {
     border-radius: 4px;
 }
 
+.alineacion button {
+    padding-inline: 13px;
+    padding-block: 5px;
+}
 
 footer{
         display: flex;
@@ -596,40 +602,23 @@ text-decoration: none;
   /* Estilo para el enlace dentro del botón */
 .botones a {
     text-decoration: none;
-    color: inherit;
 }
 
 .botones a:hover {
     text-decoration: underline;
 }
-/* 
-.asidedos {
 
-  height: 0;
-  overflow: hidden;
-  transition: height 0.5s ease;
+
+#espaciadoInput {
+    margin-left: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
 }
 
-.asidedos.active {
-  height: 100%;
+.aside-uno.dark-mode {
+
 }
-
-
-.cerrar-aside:hover {
-  background-color: #555;
-}
-
-.asideuno {
-
-  height: 0;
-  overflow: hidden;
-  transition: height 0.5s ease;
-}
-
-.asideuno.active {
-  height: 100%;
-}
-.asidedos.active,
-.asideuno.active {
-  height: 100%;
-} */
