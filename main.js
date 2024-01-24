@@ -1,9 +1,12 @@
-//IMPORTANTE ☆*: .｡. o(≧▽≦)o .｡.:*☆
+// ☆*: .｡. o(≧▽≦)o .｡.:*☆
+
+//----✍️(◔◡◔)––––IMPORTANTE––HEADER––MAIN–––––—>—<
 
 // MODO OSCURO
 const modoOscuro = () => {
   document.body.classList.toggle("dark-mode");
 };
+
 
 // INSERTAR IMAGEN
 const divImg = document.getElementById("image");
@@ -24,6 +27,10 @@ fileInput.addEventListener("change", (e) => {
   }
 });
 
+
+//--------IMAGEN-------(❤️ ω ❤️)---------
+
+
 // DESCARGAR IMAGEN
 downloadBtn.addEventListener("click", () => {
   domtoimage.toBlob(divImg).then((blob) => {
@@ -31,7 +38,7 @@ downloadBtn.addEventListener("click", () => {
   });
 });
 
-//FILTROS ^_____^(￣y▽￣)╭ Ohohoho.....
+//FILTROS ^_____^ .....
 
 const img = document.querySelector(".img");
 const brillo = document.getElementById("brightnessFiltro");
@@ -83,9 +90,23 @@ const saturacion = document.getElementById("saturateFiltro");
     
     aplicarFiltros();
 
+    ///corregir el error de invertir!!!!!!
 })
 
-//TEXTO
+
+//.......Fondo imagen 
+
+
+// document.getElementById('fondoImagen').addEventListener('input', function() {
+//   var fondoSeleccionado = this.value;
+//   document.querySelectorAll('.img').forEach(function(elemento) {
+//     elemento.style.backgroundColor = fondoSeleccionado;
+//   });
+//   document.getElementById('background-color').innerText = fondoSeleccionado;
+// });
+    
+
+//-----------TEXTO----d=====(￣▽￣*)b
 
 //====Textarea y meme
 const actualizarTextoSuperior = () => {
@@ -96,5 +117,114 @@ const actualizarTextoSuperior = () => {
 const actualizarTextoInferior = () => {
   const textoInferior = document.getElementById("texto-inferior-textarea").value;
   document.getElementById("texto-inferior").innerText = textoInferior
+};
+
+
+
+//ººººººººº------CHECKBOX---º
+
+const aparecerDesaparecer = () => {
+  var checkBoxd = document.getElementById("superior-check");
+  var text = document.getElementById("texto-superior");
+  if (checkBoxd.checked == true){
+    text.style.display = "none";
+  } else {
+    text.style.display = "block";
+  }
+}
+
+const aparecerDesaparecerdos = () => {
+  var checkBoxu = document.getElementById("inferior-check");
+  var texto = document.getElementById("texto-inferior");
+  if (checkBoxu.checked == true){
+    texto.style.display = "none";
+  } else {
+    texto.style.display = "block";
+  }
+}
+
+
+//BACKGROUND .............
+
+document.getElementById('colorFondo').addEventListener('input', () => {
+  const colorFondoSeleccionado = document.getElementById('colorFondo').value;
+  document.querySelectorAll('.texto-meme').forEach((elemento) => {
+    elemento.style.backgroundColor = colorFondoSeleccionado;
+  });
+  document.getElementById('background-color').innerText = colorFondoSeleccionado;
+  console.log(colorFondoSeleccionado)
+});
+
+
+// ---------- COLOR TEXTO-----
+document.getElementById('colorTexto').addEventListener('input', () => {
+  const colorTextoSeleccionado = document.getElementById('colorTexto').value;
+  document.querySelectorAll('.texto-meme').forEach((elemento) => {
+    elemento.style.color = colorTextoSeleccionado;
+  });
+  document.getElementById('text-background-color').innerText = colorTextoSeleccionado;
+  console.log(colorTextoSeleccionado.value)
+});
+
+
+//-------------SELECT FUENTE
+
+const cambiarFuente = () => {
+  const dropdown = document.getElementById("dropdown");
+  const selectedFont = dropdown.options[dropdown.selectedIndex].value;
+
+  const textoSuperior = document.getElementById("texto-superior");
+  const textoInferior = document.getElementById("texto-inferior");
+
+  textoSuperior.style.fontFamily = selectedFont;
+  textoInferior.style.fontFamily = selectedFont;
+};
+
+//----------TAMAÑO DE FUENTE
+const cambiarTamañoFuente = () => {
+  const tamañoFuente = document.getElementById("tamañoFuente").value;
+  const textoSuperior = document.getElementById("texto-superior");
+  const textoInferior = document.getElementById("texto-inferior");
+
+  textoSuperior.style.fontSize = `${tamañoFuente}px`;
+  textoInferior.style.fontSize = `${tamañoFuente}px`;
+};
+
+//----------------CONTORNO
+
+// Funciones para cambiar el contorno del texto meme
+const aplicarContorno = (estiloContorno) => {
+  // Obtén el elemento del texto meme
+  const textoSuperior = document.getElementById("texto-superior");
+  const textoInferior = document.getElementById("texto-inferior");
+
+  // Actualiza el estilo del contorno
+  textoSuperior.style.webkitTextStroke = estiloContorno;
+  textoInferior.style.webkitTextStroke = estiloContorno;
+};
+
+
+//------------------ESPACIADO
+
+const cambiarEspaciado = () => {
+  const espaciadoInput = document.getElementById("espaciadoInput").value;
+  const textoSuperior = document.getElementById("texto-superior");
+  const textoInferior = document.getElementById("texto-inferior");
+
+  textoSuperior.style.padding = `${espaciadoInput}px`;
+  textoInferior.style.padding = `${espaciadoInput}px`;
+};
+
+//--------------------INTERLINEADO
+
+const cambiarInterlineado = () => {
+  const interlineado = document.getElementById("seleccionarInterlineado");
+  const selectedInterli = interlineado.options[interlineado.selectedIndex].value;
+
+  const textoSuperior = document.getElementById("texto-superior");
+  const textoInferior = document.getElementById("texto-inferior");
+
+  textoSuperior.style.lineHeight = selectedInterli;
+  textoInferior.style.lineHeight = selectedInterli;
 };
 
