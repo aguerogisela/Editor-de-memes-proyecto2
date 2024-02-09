@@ -1,173 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header,
+footer {
+	padding: 10px;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+.wrapper {
+	display: flex;
+	flex: 1;
+}
+
+.aside-container {
+	flex: 1;
+}
+
+.main-container {
+	flex: 2;
+}
+
+@media screen and (min-width: 970px) {
+	body {
+		display: flex;
+		min-height: 100vh;
+		margin: 0;
+	}
+
+	header,
+	footer {
+		background-color: #333;
+		color: #fff;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.super-container {
+		display: flex;
+		padding-right: 40px;
+	}
+
+	#imagenAside,
+	#textoAside {
+		background-color: #f2aff2;
+		box-shadow: 20px -4px 15px 0px #c46cd4ab;
+	}
+	#editarimagen,
+	#editartexto {
+		background-color: #f2aff2;
+	}
+	.main-container {
+		display: flex;
+		background-color: #e0e0e0;
+		padding-top: 30px;
+		justify-content: flex-start;
+	}
+	.aside-container {
+		flex: 0;
+	}
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 /*Estilo Inspiration */
-@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
 
 /* Estilo Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 
 /* Estilo Poppins Sans Serif */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 /* Estilo Oswald */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 
 /* Estilo Smokum */
-@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
-
-html {
-    scroll-behavior: smooth;
-} 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s ease;
-}
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
 
 /* Modo Oscuro */
 body.dark-mode {
-    --color-background: #636363;
-    --color-text-dark: #ffffff;
-    --color-header-background: #464646;
-    --color-border: 2px solid #e200e2;
-
+	--color-background: #636363;
+	--color-text-dark: #ffffff;
+	--color-header-background: #464646;
+	--color-border: 2px solid #e200e2;
 }
 
 /* Modo Claro */
 :root {
-    --color-background: #fff;
-    --color-text-light: #000;
-    --color-header-background: pink;
-
-    
+	--color-background: #fff;
+	--color-text-light: #000;
+	--color-header-background: pink;
 }
 /* ----OTROS COLORES---- */
 :root {
-    --color-seleccionado: pink;
-}
-
- @media screen and (min-width: 970px){
-
+	--color-seleccionado: pink;
 }
 
 /*------------------- Header-------------------------- */
 .aside-uno {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease;
-    scroll-behavior: smooth;
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s ease;
+	scroll-behavior: smooth;
 }
 
 header {
-    text-align: center;
-    color: var(--color-text-light);
-    padding: 20px;
-    background: var(--color-header-background);
-    transition: background-color 0.5s ease;
+	text-align: center;
+	color: var(--color-text-light);
+	padding: 20px;
+	background: var(--color-header-background);
+	transition: background-color 0.5s ease;
 }
 
+h1 {
+	color: var(--color-text-dark);
+}
 header.dark-mode {
-    color: var(--color-text-dark);
+	color: var(--color-text-dark);
 }
 button a {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
 /* -------botones------ */
 .botones {
-display: flex;
-justify-content: space-around;
-margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
 }
-.botonImagen{
-    background-color: rgba(236, 194, 234, 0.4); /* Color azul con 70% de opacidad */
-color: #fff;
-padding: 10px 15px;
-cursor: pointer;
-border: 2px solid rgba(207, 70, 200, 0.7) ;
-border-radius: 5px;
-transition: background-color 0.3s ease;
+.botonImagen {
+	background-color: rgba(
+		236,
+		194,
+		234,
+		0.4
+	); /* Color azul con 70% de opacidad */
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 2px solid rgba(207, 70, 200, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
 }
-.botonheader{
-    background-color: rgba(236, 194, 234, 0.4); /* Color azul con 70% de opacidad */
-color: #fff;
-padding: 10px 15px;
-cursor: pointer;
-border: 2px solid rgba(207, 70, 200, 0.7) ;
-border-radius: 5px;
-transition: background-color 0.3s ease;
+.botonheader {
+	background-color: rgba(
+		236,
+		194,
+		234,
+		0.4
+	); /* Color azul con 70% de opacidad */
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 2px solid rgba(207, 70, 200, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
 }
 
 .botones button:hover {
- background-color: rgba(119, 3, 90, 0.7); /* Cambia el color al pasar el mouse */
+	background-color: rgba(
+		119,
+		3,
+		90,
+		0.7
+	); /* Cambia el color al pasar el mouse */
 }
 
 .botones i {
-margin-right: 5px;
+	margin-right: 5px;
 }
 
-  /* Estilo para el enlace dentro del botón */
+/* Estilo para el enlace dentro del botón */
 .botones a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .botones a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /*------------ Main Container------------- */
 .main-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-background);
 }
 
 .container-padre {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-top: 25px;
-padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 25px;
 }
 
 /*-------- Cuadro Meme -----*/
 
 .imagen-dentro {
-    width: 100%;
-    flex-grow: 1;
-    background-size: cover;
-    width: 100%;
-    flex-grow: 1;
-    background-size: cover;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
-    background-color: black;
-    /* height: 350px; */
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	width: 100%;
+	flex-grow: 1;
+	background-size: cover;
+	width: 100%;
+	flex-grow: 1;
+	background-size: cover;
+	box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+	background-color: black;
+	/* height: 350px; */
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 /* #imgTag {float: left} */
 /* ----Me ayudo a quitar el espacio ----- */
 
 .texto-meme {
-    background: rgb(235, 233, 233);
-    color: var(--color-text);
-    text-align: center;
-    padding: 15px;
-    margin: 0;
+	background: rgb(235, 233, 233);
+	color: var(--color-text);
+	text-align: center;
+	padding: 15px;
+	margin: 0;
 }
 
-
 .boton-descarga {
-    margin: 30px 0;
+	margin: 30px 0;
 }
 
 /* --------------Aside de Imagen---------------- */
@@ -175,450 +240,464 @@ padding-bottom: 40px;
 /* ----Boton "editar imagen"----- */
 
 .asideuno {
-    overflow-y: auto;
-    /* max-height: 100vh; */
-    /* height: 100%; */
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-    transition: height 0.5s ease;
-    padding-top: 30px;
-    background-color: var(--color-header-background);
+	overflow-y: auto;
+	/* max-height: 100vh; */
+	/* height: 100%; */
+	font-family: "Arial", sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	overflow: hidden;
+	transition: height 0.5s ease;
+	background-color: gray;
+	padding-top: 20px;
 }
 
 #imgTag {
-    width: 240px;
+	width: 450px;
 }
 .imagen {
-    width: 275px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 40px;
-    border: var(--color-border);
+	width: 275px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border: var(--color-border);
+	padding-bottom: 33px;
 }
 
 .titulo-imagen {
-    text-align: center;
-    color: #333;
-    font-size: 1.5em;
+	text-align: center;
+	color: #333;
+	font-size: 1.5em;
 }
 
 /* Fondo */
 .fondo-seccion {
-    display: block;
+	display: block;
 }
 
 .fondo-titulo {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .fondo {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	width: 100%;
+	text-align: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .contenido-select select {
-    padding: 5px 10px;
-    font-size: 14px;
+	padding: 5px 10px;
+	font-size: 14px;
 }
 .contenido-select select:hover {
-    background: #fae1ff;
+	background: #fae1ff;
 }
 
-
 .range-de-filtros {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .input-de-filtros {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .input-de-filtros label {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .input-de-filtros input {
-    width: 100%;
+	width: 100%;
 }
 
-.url-imagen-input{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
+.url-imagen-input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
 }
 /* ---boton Restablecer filtros------ */
 .restablecer-filtros {
-    padding: 10px 10px;
-    margin-top: 15px;
-    border: none;
-    background: #d8d8d8;
+	padding: 10px 10px;
+	margin-top: 15px;
+	border: none;
+	background: #d8d8d8;
 }
 
 /*----------------------------- Aside Dos ----------*/
 .asidedos {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    /* min-height: 0;
+	font-family: "Arial", sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	/* min-height: 0;
     height: 0; */
-    overflow: hidden;
-    transition: height 0.5s ease;
-    background-color: var(--color-background);
+	overflow: hidden;
+	transition: height 0.5s ease;
+	background-color: var(--color-background);
+	background-color: gray;
+	padding-top: 20px;
 }
 
-
 h3 {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .texto {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 40px;
-    border: var(--color-border);
-
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border: var(--color-border);
 }
 
-
 .titulo-texto {
-    text-align: center;
-    color: #333;
-    width: auto;
+	text-align: center;
+	color: #333;
+	width: auto;
 }
 
 .texto-form {
-    margin-top: 20px;
 }
 
 textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
 }
 
 /*---- Fuente--- */
 
 #dropdown {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
-
 #dropdown option {
-  
-    background-color: white; 
-    color: black;
-    height:100%; 
-    overflow:hidden; 
-  }
-  #dropdown option:nth-child(2) {
-    
-    margin-top:20px; 
-    margin-bottom:20px; 
-    height: 100px;
-    font-family: "Poppins", sans-serif;
-    font-size:30px; 
-  }
-  #dropdown option:nth-child(3) {
-   
-    margin-top:20px; 
-    margin-bottom:20px; 
-    height: 100px;
-    font-family: "Roboto ";
-    font-size:30px; 
-  }
-  #dropdown option:nth-child(4) {
-    
-    margin-top:20px; 
-    margin-bottom:20px; 
-    height: 100px;
-    
-    font-family: "Inspiration";
-    font-size:30px; 
-  }
-  #dropdown option:nth-child(5) {
-    margin-top:20px; 
-    margin-bottom:20px; 
-    height: 100px;
-    font-family: "Oswald";
-    font-size:30px; 
-  }
-  #dropdown option:nth-child(6) {
-    margin-top:20px; 
-    margin-bottom:20px; 
-    height: 100px;
-    font-family:"Smokum"; 
-    font-size:30px; 
-  }
+	background-color: white;
+	color: black;
+	height: 100%;
+	overflow: hidden;
+}
+#dropdown option:nth-child(2) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100px;
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+}
+#dropdown option:nth-child(3) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100px;
+	font-family: "Roboto ";
+	font-size: 30px;
+}
+#dropdown option:nth-child(4) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100px;
 
+	font-family: "Inspiration";
+	font-size: 30px;
+}
+#dropdown option:nth-child(5) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100px;
+	font-family: "Oswald";
+	font-size: 30px;
+}
+#dropdown option:nth-child(6) {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100px;
+	font-family: "Smokum";
+	font-size: 30px;
+}
 
 .fuente-dos {
-    display: flex;
-    padding-top: 10px;
+	display: flex;
+	padding-top: 10px;
 }
 
 #tamañoFuente {
-    width: 70px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding-right: 62px;
-    padding-block: 12px;
-    padding-left: 10px;
+	width: 70px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding-right: 62px;
+	padding-block: 12px;
+	padding-left: 10px;
 }
 
 /*----- Alineacion--- */
 
 #opcionesAlineacion {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 
 #opcionesAlineacion button i {
-    font-size: 24px;
+	font-size: 24px;
 }
 
 /* -------Color -----------*/
 .opcion-de-color {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .checkbox-color {
-    padding-top: 5px;
+	padding-top: 5px;
 }
 
 /* -----------Contorno------------ */
 .contorno-button {
-    display: flex;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	text-align: center;
 }
 
 .contorno-button button {
-    border: none;
-    padding: 10px 15px;
-    margin: 4px 2px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 33.33%;
-    transition: background-color 0.2s;
-    cursor: pointer;
+	border: none;
+	padding: 10px 15px;
+	margin: 4px 2px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	width: 33.33%;
+	transition: background-color 0.2s;
+	cursor: pointer;
 }
 
-.contorno-button button:hover{
-    background-color: #ff004c;
+.contorno-button button:hover {
+	background-color: #ff004c;
 }
 
-
-
-.ninguno{
-
+.ninguno {
 }
-.oscuro{
-    color: #333;
+.oscuro {
+	color: #333;
 	-webkit-text-stroke: 1px #282828;
 	text-shadow: 0px 4px 4px #282828;
 }
 
-
-.claro{
-    color: white;
-	-webkit-text-stroke: 1px #F8F8F8;
-	text-shadow: 0px 1px 4px #23430C;
+.claro {
+	color: white;
+	-webkit-text-stroke: 1px #f8f8f8;
+	text-shadow: 0px 1px 4px #23430c;
 }
 /* ---------Espaciado ------------*/
 #espaciado-input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 /* ---------Interlineado -----------*/
 #seleccionarInterlineado {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 .alineacion button {
-    padding-inline: 13px;
-    padding-block: 5px;
+	padding-inline: 13px;
+	padding-block: 5px;
 }
 
-footer{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        background-color:var(--color-seleccionado);
-        padding: 70px 30px;
-        flex-direction: column;
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: var(--color-seleccionado);
+	padding: 20px 30px;
+	flex-direction: column;
 }
 
 .ultimos-iconos {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
-        
+
 .red-githubdos {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding-bottom: 15px;
-    color: black;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding-bottom: 15px;
+	color: black;
 }
-        
+
 .red-githubdos span {
-    font-size: 20px;
-    /* background-color: rgb(112, 54, 54); */
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    color:var(--color-seleccionado);
-    margin: 10px;
+	font-size: 20px;
+	/* background-color: rgb(112, 54, 54); */
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	color: var(--color-seleccionado);
+	margin: 10px;
 }
 
-
-
-.red-githubdos span:hover{
-    border: 1px solid white;
-    color: white;
-    background: var(--color-seleccionado);
-    background: var(--color-segundo);
+.red-githubdos span:hover {
+	border: 1px solid white;
+	color: white;
+	background: var(--color-seleccionado);
+	background: var(--color-segundo);
 }
-
-
 
 .saludo-final p {
-    font-size: 20px;
-    color: black;
+	font-size: 20px;
+	color: black;
 }
 
 /* --------BOTON DESCARGA--------- */
 
 a:link {
-text-decoration: none;
+	text-decoration: none;
 }
 
-
 #downloadBtn {
-    background-color: #c500c5;
-    display: inline-block;
-    position: relative;
-    margin: 25px 5px;
-    padding: 15px 15px 15px 70px;
-    color: #fff;
-    transition: all 0.4s ease;
-    border-radius: 3px;
-    text-decoration: none;
-    border: none; /* Agregar un borde si lo necesitas */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    outline: none; /* Eliminar el contorno al hacer clic */
+	background-color: #c500c5;
+	display: inline-block;
+	position: relative;
+	margin: 25px 5px;
+	padding: 15px 15px 15px 70px;
+	color: #fff;
+	transition: all 0.4s ease;
+	border-radius: 3px;
+	text-decoration: none;
+	border: none; /* Agregar un borde si lo necesitas */
+	cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+	outline: none; /* Eliminar el contorno al hacer clic */
 }
 
 #downloadBtn:before {
-    content: "\f019";
-    font-family: fontAwesome;
-    position: absolute;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    font-size: 23px;
-    border-radius: 0 15px 0 0;
-    color: #000;
-    background-color: #fff;
-    opacity: 0.3;
-    padding: 11px;
-    top: 0;
-    left: 0;
+	content: "\f019";
+	font-family: fontAwesome;
+	position: absolute;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 23px;
+	border-radius: 0 15px 0 0;
+	color: #000;
+	background-color: #fff;
+	opacity: 0.3;
+	padding: 11px;
+	top: 0;
+	left: 0;
 }
 
 #downloadBtn:hover {
-    background: #ff004c;
+	background: #ff004c;
 }
-
-
 
 /* ---------hasta aquui---- */
-.botones {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
 
 .botones button {
-    background-color: rgba(236, 194, 234, 0.4); /* Color azul con 70% de opacidad */
-    color: #fff;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: 2px solid rgba(207, 70, 200, 0.7) ;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+	background-color: rgba(
+		236,
+		194,
+		234,
+		0.4
+	); /* Color azul con 70% de opacidad */
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 2px solid rgba(207, 70, 200, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
 }
 
 .botones button:hover {
-    background-color: rgba(119, 3, 90, 0.7); /* Cambia el color al pasar el mouse */
+	background-color: rgba(
+		119,
+		3,
+		90,
+		0.7
+	); /* Cambia el color al pasar el mouse */
 }
 
 .botones i {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
-  /* Estilo para el enlace dentro del botón */
+/* Estilo para el enlace dentro del botón */
 .botones a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .botones a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
-
 #espaciadoInput {
-    margin-left: 1px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
+	margin-left: 1px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
 }
 
 .aside-uno.dark-mode {
+}
+.adjuntar-imagen {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	border-top: 1px solid #ffffff;
+	padding: 16px 0;
+	border-radius: 6px;
+	/* width: 50%; */
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ffffff;
+}
+.file-label {
+	display: inline-block;
+	padding: 10px;
+	background-color: #fdd2ff;
+	color: black;
 
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.file-label svg {
+	margin-right: 5px;
+}
+
+/* Estilo adicional para resaltar cuando se pasa el mouse sobre el label */
+.file-label:hover {
+	background-color: #750573;
+	color: #fff;
 }
