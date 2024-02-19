@@ -252,15 +252,10 @@ alignCenterBtn.addEventListener("click", (e) => {
 	textoInferior.style.textAlign = "center";
 });
 
-///-------------------
-const cambiarFuente = () => {
-	const selectElement = document.getElementById("dropdown");
-	const selectedFont = selectElement.value;
+///---------------CAMBIAR TIPOGRAFIA----
+const selectElement = document.getElementById("dropdown");
 
-	const textoSuperior = document.getElementById("texto-superior");
-	const textoInferior = document.getElementById("texto-inferior");
-
-	// Aplicar la fuente seleccionada
-	textoSuperior.style.fontFamily = selectedFont;
-	textoInferior.style.fontFamily = selectedFont;
-};
+selectElement.addEventListener("change", function () {
+	const selectedFont = this.value;
+	document.body.style.fontFamily = selectedFont;
+});

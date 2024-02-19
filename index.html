@@ -25,7 +25,8 @@
 	</head>
 	<body>
 		<!-- ====Comienzo de header==== -->
-		<header>
+	<div class="parent">
+  <header class="div1">
 			<h1>Generador de Memes</h1>
 			<div id="botonesheader">
 				<a href="#editarimagen" class="botonheader">Imagen</a>
@@ -33,9 +34,8 @@
 				<button onclick="modoOscuro()" class="botonheader">Modo oscuro</button>
 			</div>
 		</header>
-		<div class="super-container">
-			<!-- ===Comienzo de main==== -->
-			<main class="main-container">
+<div class="div2"> 
+  <main class="main-container">
 				<div class="container-padre">
 					<div class="imagen-dentro" id="image">
 						<p class="texto-meme" id="texto-superior">TEXTO SUPERIOR</p>
@@ -45,10 +45,10 @@
 				</div>
 				<button id="downloadBtn">DOWNLOAD</button>
 			</main>
-			<!-- ===Comienzo de primer Aside (IMAGEN)==== -->
-			<div class="aside-container">
-				<aside id="imagenAside" class="asideuno">
-					<div class="imagen" id="editarimagen">
+  </div>
+<div class="div3">
+  <aside id="imagenAside" class="asideuno">
+	<div class="imagen" id="editarimagen">
 						<h2 class="titulo-imagen">NUEVA IMAGEN</h2>
 						<!-- ===COMIENZO DE FORM==== -->
 						<form class="imagen-form">
@@ -244,13 +244,13 @@
 							</div>
 							<button class="restablecer-filtros">Restablecer Filtros</button>
 						</form>
-					</div>
 				</aside>
-
-				<!-- ===Comienzo de segundo Aside (TEXTO)==============================================-->
-
-				<aside id="textoAside" class="asidedos">
-					<div class="texto" id="editartexto">
+  </div>
+  
+  
+<div class="div4"> 
+  <aside id="textoAside" class="asidedos">
+								<div class="texto" id="editartexto">
 						<h2 class="titulo-texto">TEXTO</h2>
 						<!-- ===COMIENZO DE FORM==== -->
 						<form class="texto-form">
@@ -297,18 +297,15 @@ BOTTOM TEXT</textarea
 										<label for="seleccionar-fuente"
 											>Selecciona la fuente:</label
 										>
-										<select
-											name="tipografia"
-											id="dropdown"
-											onchange="cambiarFuente()"
-										>
-											<option value="" disabled selected>Estilos</option>
-											<option>Poppins Sans-Serif</option>
-											<option>Roboto</option>
-											<option>Inspiration</option>
-											<option>Oswald</option>
-											<option>Smokum</option>
-										</select>
+										<select name="tipografia" id="dropdown">
+                                            <option value="Poppins">Poppins Sans-Serif</option>
+                                            <option value="Roboto">Roboto</option>
+                                            <option value="Inspiration">Inspiration</option>
+                                            <option value="Oswald">Oswald</option>
+                                            <option value="Smokum">Smokum</option>
+                                        </select>
+                                        <option value="" disabled selected>Estilos</option>
+
 									</div>
 									<div class="fuente-dos">
 										<div class="tamaño">
@@ -433,10 +430,10 @@ BOTTOM TEXT</textarea
 						</form>
 					</div>
 				</aside>
-			</div>
-		</div>
-		<!--==== ========================= COMIENZO DE FOOTER =====================-->
-		<footer>
+				</aside>
+  </div>
+  
+  <footer class="div5">
 			<nav class="ultimos-iconos">
 				<a href="https://github.com/aguerogisela" class="red-githubdos">
 					<span><i class="fa-brands fa-github-alt"></i></span>
@@ -468,6 +465,9 @@ BOTTOM TEXT</textarea
 				<p>Hecho con amor 🩷 por Gisela</p>
 			</div>
 		</footer>
+
+</div>
+  </div>
 
 		<!-- ============= FINAL ================ -->
 		<script src="main.js"></script>
