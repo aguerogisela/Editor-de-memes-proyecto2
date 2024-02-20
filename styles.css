@@ -11,7 +11,6 @@
 		grid-template-rows: 1fr 4fr 1fr;
 		grid-column-gap: 8px;
 		grid-row-gap: 4px;
-		background-color: ;
 	}
 
 	.div1 {
@@ -34,18 +33,22 @@
 	}
 }
 
+h2 {
+	color: var(--color-text-dark);
+}
 body {
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	background-color: rgb(255, 199, 208);
 }
 
 header,
 footer {
 	padding: 10px;
-	background-color: #333;
+	background-color: #ff0101;
 	color: white;
 	text-align: center;
 }
@@ -72,7 +75,7 @@ footer {
 
 	header,
 	footer {
-		background-color: #333;
+		background-color: #df3535;
 		color: #fff;
 		padding: 10px;
 		text-align: center;
@@ -87,27 +90,38 @@ footer {
 	#textoAside {
 		background-color: transparent;
 	}
-	#editarimagen,
-	#editartexto {
+	#editarimagen.dark-mode,
+	#editartexto.dark-mode {
 		background-color: #f8bbf8;
 	}
 	.main-container {
 		display: flex;
-		background-color: #e0e0e0;
 		padding-top: 30px;
 		justify-content: flex-start;
 	}
 	.aside-container {
 		flex: 0;
 	}
+	.imagen-dentro {
+		width: 100vw;
+	}
+	#imgTag {
+		width: none;
+	}
 }
 
 /* Modo Oscuro */
 body.dark-mode {
-	--color-background: #636363;
 	--color-text-dark: #ffffff;
-	--color-header-background: #464646;
-	--color-border: 2px solid #e200e2;
+	--color-border: 1px solid #8025bd;
+	--back-dark: hsla(317, 90%, 67%, 0.055);
+	--footer-dark: rgba(0, 0, 0, 0.205);
+	background-image: url("imagen/milad-fakurian-seA-FPPXL-M-unsplash.jpg");
+	background-size: cover; /* Para cubrir todo el área del body */
+	background-position: center; /* Para centrar la imagen */
+	background-repeat: no-repeat; /* Para que la imagen no se repita */
+	/* Otras propiedades opcionales, como color de fondo de respaldo */
+	/* background-color: #f0f0f0; */
 }
 
 /* Modo Claro */
@@ -133,16 +147,17 @@ header {
 	text-align: center;
 	color: var(--color-text-light);
 	padding: 20px;
-	background: var(--color-header-background);
-	transition: background-color 0.5s ease;
+	background-color: rgb(229 40 72 / 15%);
+	transition: 0.5s ease;
+	color: var(--color-text-dark);
 }
-
+footer {
+	background-color: #c500c56c;
+}
 h1 {
 	color: var(--color-text-dark);
 }
-header.dark-mode {
-	color: var(--color-text-dark);
-}
+
 button a {
 	text-decoration: none;
 	color: white;
@@ -210,7 +225,7 @@ button a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--color-background);
+	background-color: transparent;
 }
 
 .container-padre {
@@ -219,7 +234,6 @@ button a {
 	align-items: center;
 	padding-top: 25px;
 }
-
 /*-------- Cuadro Meme -----*/
 
 .imagen-dentro {
@@ -237,7 +251,9 @@ button a {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	box-shadow: 0px 0px 13px 1px rgb(241 155 155 / 79%);
 }
+
 /* #imgTag {float: left} */
 /* ----Me ayudo a quitar el espacio ----- */
 
@@ -272,6 +288,7 @@ button a {
 	transition: height 0.5s ease;
 	background-color: transparent;
 	padding-top: 20px;
+	color: var(--color-text-dark);
 }
 
 #imgTag {
@@ -285,12 +302,15 @@ button a {
 	padding: 20px;
 	border: var(--color-border);
 	padding-bottom: 33px;
+	background-color: var(--back-dark);
+	box-shadow: 0px 0px 16px 2px rgb(241 155 155 / 79%);
 }
 
 .titulo-imagen {
 	text-align: center;
 	color: #333;
 	font-size: 1.5em;
+	color: var(--color-text-dark);
 }
 
 /* Fondo */
@@ -356,6 +376,7 @@ button a {
 /*----------------------------- Aside Dos ----------*/
 .asidedos {
 	font-family: "Arial", sans-serif;
+
 	background-color: #f4f4f4;
 	margin: 0;
 	padding: 0;
@@ -366,9 +387,9 @@ button a {
     height: 0; */
 	overflow: hidden;
 	transition: height 0.5s ease;
-	background-color: var(--color-background);
-	background-color: gray;
+	background-color: transparent;
 	padding-top: 20px;
+	color: var(--color-text-dark);
 }
 
 h3 {
@@ -376,17 +397,20 @@ h3 {
 }
 
 .texto {
-	background-color: #fff;
+	background-color: violet;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
 	border: var(--color-border);
+	background-color: var(--back-dark);
+	box-shadow: 0px 0px 16px 2px rgb(241 155 155 / 79%);
 }
 
 .titulo-texto {
 	text-align: center;
 	color: #333;
 	width: auto;
+	color: var(--color-text-dark);
 }
 
 .texto-form {
@@ -550,9 +574,10 @@ footer {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	background-color: var(--color-seleccionado);
+	background-color: var(--color-header-background);
 	padding: 20px 30px;
 	flex-direction: column;
+	background-color: var(--footer-dark);
 }
 
 .ultimos-iconos {
@@ -592,6 +617,7 @@ footer {
 .saludo-final p {
 	font-size: 20px;
 	color: black;
+	color: var(--color-text-dark);
 }
 
 /* --------BOTON DESCARGA--------- */
@@ -685,8 +711,6 @@ a:link {
 	margin-top: 5px;
 }
 
-.aside-uno.dark-mode {
-}
 .adjuntar-imagen {
 	display: flex;
 	justify-content: center;
