@@ -233,8 +233,6 @@ button a {
 	flex-direction: column;
 	align-items: center;
 	padding-top: 25px;
-	width: 40%;
-	height: 40%;
 }
 /*-------- Cuadro Meme -----*/
 
@@ -242,6 +240,7 @@ button a {
 	width: 100%;
 	flex-grow: 1;
 	background-size: cover;
+	width: 100%;
 	flex-grow: 1;
 	background-size: cover;
 	box-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
@@ -293,10 +292,9 @@ button a {
 	color: var(--color-text-dark);
 }
 
-/* #imgTag {
+#imgTag {
 	width: 300px;
-	height: 300px;
-} */
+}
 .imagen {
 	width: 275px;
 	background-color: #fff;
