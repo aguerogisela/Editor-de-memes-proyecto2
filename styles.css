@@ -1,8 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inspiration:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+h2 {
+	color: var(--color-text-dark);
+}
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: rgb(255, 199, 208);
+}
+
+header,
+footer {
+	padding: 10px;
+	background-color: #ff0101;
+	color: white;
+	text-align: center;
+}
+
+/*------------------- Header-------------------------- */
+
+header {
+	text-align: center;
+	color: var(--color-text-light);
+	padding: 20px;
+	background-color: rgb(229 40 72 / 15%);
+	transition: 0.5s ease;
+	color: var(--color-text-dark);
+}
+
+h1 {
+	color: var(--color-text-dark);
+}
 
 @media screen and (min-width: 1200px) {
 	.parent {
@@ -33,39 +62,6 @@
 	}
 }
 
-h2 {
-	color: var(--color-text-dark);
-}
-body {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	background-color: rgb(255, 199, 208);
-}
-
-header,
-footer {
-	padding: 10px;
-	background-color: #ff0101;
-	color: white;
-	text-align: center;
-}
-
-.wrapper {
-	display: flex;
-	flex: 1;
-}
-
-.aside-container {
-	flex: 1;
-}
-
-.main-container {
-	flex: 2;
-}
-
 @media screen and (min-width: 970px) {
 	body {
 		display: flex;
@@ -75,7 +71,6 @@ footer {
 
 	header,
 	footer {
-		background-color: #df3535;
 		color: #fff;
 		padding: 10px;
 		text-align: center;
@@ -114,14 +109,8 @@ footer {
 body.dark-mode {
 	--color-text-dark: #ffffff;
 	--color-border: 1px solid #8025bd;
-	--back-dark: hsla(317, 90%, 67%, 0.055);
+	--back-dark: #ff00b51c;
 	--footer-dark: rgba(0, 0, 0, 0.205);
-	background-image: url("imagen/milad-fakurian-seA-FPPXL-M-unsplash.jpg");
-	background-size: cover; /* Para cubrir todo el área del body */
-	background-position: center; /* Para centrar la imagen */
-	background-repeat: no-repeat; /* Para que la imagen no se repita */
-	/* Otras propiedades opcionales, como color de fondo de respaldo */
-	/* background-color: #f0f0f0; */
 }
 
 /* Modo Claro */
@@ -135,55 +124,17 @@ body.dark-mode {
 	--color-seleccionado: pink;
 }
 
-/*------------------- Header-------------------------- */
-.aside-uno {
-	height: 0;
-	overflow: hidden;
-	transition: height 0.5s ease;
-	scroll-behavior: smooth;
+body.dark-mode {
+	background-image: url("imagen/milad-fakurian-seA-FPPXL-M-unsplash.jpg");
+	background-size: cover; /* Para cubrir todo el área del body */
+	background-position: center; /* Para centrar la imagen */
+	background-repeat: no-repeat; /* Para que la imagen no se repita */
+	/* Otras propiedades opcionales, como color de fondo de respaldo */
+	/* background-color: #f0f0f0; */
 }
-
-header {
-	text-align: center;
-	color: var(--color-text-light);
-	padding: 20px;
-	background-color: rgb(229 40 72 / 15%);
-	transition: 0.5s ease;
-	color: var(--color-text-dark);
-}
-footer {
-	background-color: #c500c56c;
-}
-h1 {
-	color: var(--color-text-dark);
-}
-
-button a {
-	text-decoration: none;
-	color: white;
-}
-
 /* -------botones------ */
-.botones {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 20px;
-}
-.botonImagen {
-	background-color: rgba(
-		236,
-		194,
-		234,
-		0.4
-	); /* Color azul con 70% de opacidad */
-	color: #fff;
-	padding: 10px 15px;
-	cursor: pointer;
-	border: 2px solid rgba(207, 70, 200, 0.7);
-	border-radius: 5px;
-	transition: background-color 0.3s ease;
-}
-.botonheader {
+
+.botones button {
 	background-color: rgba(
 		236,
 		194,
@@ -218,6 +169,81 @@ button a {
 
 .botones a:hover {
 	text-decoration: underline;
+}
+
+.botonImagen {
+	background-color: rgba(
+		236,
+		194,
+		234,
+		0.4
+	); /* Color azul con 70% de opacidad */
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 2px solid rgba(207, 70, 200, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+.botonheader {
+	background-color: rgba(
+		236,
+		194,
+		234,
+		0.4
+	); /* Color azul con 70% de opacidad */
+	color: #fff;
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 2px solid rgba(207, 70, 200, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.boton-descarga {
+	margin: 30px 0;
+}
+
+/* --------BOTON DESCARGA--------- */
+
+a:link {
+	text-decoration: none;
+}
+
+#downloadBtn {
+	background-color: #c500c5;
+	display: inline-block;
+	position: relative;
+	margin: 25px 5px;
+	padding: 15px 15px 15px 70px;
+	color: #fff;
+	transition: all 0.4s ease;
+	border-radius: 3px;
+	text-decoration: none;
+	border: none; /* Agregar un borde si lo necesitas */
+	cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+	outline: none; /* Eliminar el contorno al hacer clic */
+}
+
+#downloadBtn:before {
+	content: "\f019";
+	font-family: fontAwesome;
+	position: absolute;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 23px;
+	border-radius: 0 15px 0 0;
+	color: #000;
+	background-color: #fff;
+	opacity: 0.3;
+	padding: 11px;
+	top: 0;
+	left: 0;
+}
+
+#downloadBtn:hover {
+	background: #ff004c;
 }
 
 /*------------ Main Container------------- */
@@ -264,10 +290,6 @@ button a {
 	text-align: center;
 	padding: 15px;
 	margin: 0;
-}
-
-.boton-descarga {
-	margin: 30px 0;
 }
 
 /* --------------Aside de Imagen---------------- */
@@ -410,11 +432,9 @@ h3 {
 .titulo-texto {
 	text-align: center;
 	color: #333;
+
 	width: auto;
 	color: var(--color-text-dark);
-}
-
-.texto-form {
 }
 
 textarea {
@@ -537,8 +557,6 @@ textarea {
 	background-color: #ff004c;
 }
 
-.ninguno {
-}
 .oscuro {
 	color: #333;
 	-webkit-text-stroke: 1px #282828;

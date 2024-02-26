@@ -89,18 +89,6 @@ restablecerFiltrosBtn.addEventListener("click", () => {
 	///corregir el error de invertir!!!!!!
 });
 
-//.......Fondo imagen
-
-// document.getElementById('fondoImagen').addEventListener('input', function() {
-//   var fondoSeleccionado = this.value;
-//   document.querySelectorAll('.img').forEach(function(elemento) {
-//     elemento.style.backgroundColor = fondoSeleccionado;
-//   });
-//   document.getElementById('background-color').innerText = fondoSeleccionado;
-// });
-
-//-----------TEXTO----d=====(￣▽￣*)b
-
 //====Textarea y meme
 const actualizarTextoSuperior = () => {
 	const textoSuperior = document.getElementById(
@@ -161,21 +149,6 @@ document.getElementById("colorTexto").addEventListener("input", () => {
 	console.log(colorTextoSeleccionado.value);
 });
 
-//-------------SELECT FUENTE
-
-// const cambiarFuente = () => {
-// 	const dropdown = document.getElementById("dropdown");
-// 	const selectedFont = dropdown.options[dropdown.selectedIndex].value;
-
-// 	const textoSuperior = document.getElementById("texto-superior");
-// 	const textoInferior = document.getElementById("texto-inferior");
-
-// 	textoSuperior.style.fontFamily = selectedFont;
-// 	textoInferior.style.fontFamily = selectedFont;
-
-// 	console.log(cambiarFuente);
-// };
-
 //----------TAMAÑO DE FUENTE
 const cambiarTamañoFuente = () => {
 	const tamañoFuente = document.getElementById("tamañoFuente").value;
@@ -223,7 +196,7 @@ const cambiarInterlineado = () => {
 	textoSuperior.style.lineHeight = selectedInterli;
 	textoInferior.style.lineHeight = selectedInterli;
 };
-//-----
+//-----ALINEACION
 const alignLeftBtn = document.getElementById("alignLeft");
 const alignRightBtn = document.getElementById("alignRight");
 const alignCenterBtn = document.getElementById("alignCenter");
@@ -259,3 +232,35 @@ selectElement.addEventListener("change", function () {
 	const selectedFont = this.value;
 	document.body.style.fontFamily = selectedFont;
 });
+
+//contorno
+
+const claroContorno = () => {
+	const textoSuperior = document.getElementById("texto-superior");
+	const textoInferior = document.getElementById("texto-inferior");
+	textoSuperior.style.textShadow = "0px 1px 4px #23430C";
+	textoSuperior.style.webkitTextStroke = "1px #F8F8F8";
+	textoInferior.style.textShadow = "0px 1px 4px #23430C";
+	textoInferior.style.webkitTextStroke = "1px #F8F8F8";
+};
+
+const oscuroContorno = () => {
+	const textoSuperior = document.getElementById("texto-superior");
+	const textoInferior = document.getElementById("texto-inferior");
+	textoSuperior.style.textShadow = "0px 2px 4px red";
+	textoSuperior.style.webkitTextStroke = "2px black";
+	textoInferior.style.textShadow = "0px 2px 4px red";
+	textoInferior.style.webkitTextStroke = "2px black";
+};
+
+const noContorno = () => {
+	// Selecciona el elemento de texto
+	const textoSuperior = document.getElementById("texto-superior");
+	const textoInferior = document.getElementById("texto-inferior");
+
+	// Elimina los estilos de sombra y borde del texto
+	textoSuperior.style.textShadow = "none";
+	textoSuperior.style.webkitTextStroke = "none";
+	textoInferior.style.textShadow = "none";
+	textoInferior.style.webkitTextStroke = "none";
+};
