@@ -1,6 +1,9 @@
-h2 {
-	color: var(--color-text-dark);
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inspiration:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+
 body {
 	margin: 0;
 	padding: 0;
@@ -9,7 +12,9 @@ body {
 	min-height: 100vh;
 	background-color: rgb(255, 199, 208);
 }
-
+h2 {
+	color: var(--color-text-dark);
+}
 header,
 footer {
 	padding: 10px;
