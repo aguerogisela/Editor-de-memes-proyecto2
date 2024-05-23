@@ -130,6 +130,7 @@ const aparecerDesaparecerdos = () => {
 
 document.getElementById("colorFondo").addEventListener("input", () => {
 	const colorFondoSeleccionado = document.getElementById("colorFondo").value;
+
 	document.querySelectorAll(".texto-meme").forEach((elemento) => {
 		elemento.style.backgroundColor = colorFondoSeleccionado;
 	});
@@ -161,16 +162,16 @@ const cambiarTamañoFuente = () => {
 
 //----------------CONTORNO
 
-// Funciones para cambiar el contorno del texto meme
-const aplicarContorno = (estiloContorno) => {
-	// Obtén el elemento del texto meme
-	const textoSuperior = document.getElementById("texto-superior");
-	const textoInferior = document.getElementById("texto-inferior");
+// // Funciones para cambiar el contorno del texto meme
+// const aplicarContorno = (estiloContorno) => {
+// 	// Obtén el elemento del texto meme
+// 	const textoSuperior = document.getElementById("texto-superior");
+// 	const textoInferior = document.getElementById("texto-inferior");
 
-	// Actualiza el estilo del contorno
-	textoSuperior.style.webkitTextStroke = estiloContorno;
-	textoInferior.style.webkitTextStroke = estiloContorno;
-};
+// 	// Actualiza el estilo del contorno
+// 	textoSuperior.style.webkitTextStroke = estiloContorno;
+// 	textoInferior.style.webkitTextStroke = estiloContorno;
+// };
 
 //------------------ESPACIADO
 
@@ -264,3 +265,29 @@ const noContorno = () => {
 	textoInferior.style.textShadow = "none";
 	textoInferior.style.webkitTextStroke = "none";
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	document
+		.querySelector("a[href='#editarimagen']")
+		.addEventListener("click", (event) => {
+			event.preventDefault();
+			var aside = document.querySelector(".asideuno");
+			if (aside.style.display === "none" || aside.style.display === "") {
+				aside.style.display = "flex";
+			} else {
+				aside.style.display = "none";
+			}
+		});
+
+	document
+		.querySelector("a[href='#editartexto']")
+		.addEventListener("click", (event) => {
+			event.preventDefault();
+			var asidedos = document.querySelector(".asidedos");
+			if (asidedos.style.display === "none" || asidedos.style.display === "") {
+				asidedos.style.display = "flex";
+			} else {
+				asidedos.style.display = "none";
+			}
+		});
+});

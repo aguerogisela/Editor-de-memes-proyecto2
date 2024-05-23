@@ -305,21 +305,14 @@ a:link {
 /* ----Boton "editar imagen"----- */
 
 .asideuno {
-	overflow-y: auto;
-	/* max-height: 100vh; */
-	/* height: 100%; */
 	font-family: "Arial", sans-serif;
-	background-color: #f4f4f4;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
 	overflow: hidden;
 	transition: height 0.5s ease;
-	background-color: transparent;
 	padding-top: 20px;
 	color: var(--color-text-dark);
+	display: none;
 }
 
 #imgTag {
@@ -407,20 +400,16 @@ a:link {
 /*----------------------------- Aside Dos ----------*/
 .asidedos {
 	font-family: "Arial", sans-serif;
-
 	background-color: #f4f4f4;
 	margin: 0;
 	padding: 0;
-	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	/* min-height: 0;
-    height: 0; */
 	overflow: hidden;
 	transition: height 0.5s ease;
-	background-color: transparent;
 	padding-top: 20px;
 	color: var(--color-text-dark);
+	display: none;
 }
 
 h3 {
